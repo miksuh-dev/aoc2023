@@ -25,12 +25,12 @@ pub fn main() {
                 .map(|set| {
                     set.split(',')
                         .map(|cube| {
-                            let (count_str, name_str) = cube.trim().split_once(' ').unwrap();
+                            let (count_str, color_str) = cube.trim().split_once(' ').unwrap();
 
-                            let name = name_str.to_string();
+                            let color = color_str.to_string();
                             let count = count_str.trim().parse::<i32>().unwrap();
 
-                            Cube::new(name, count)
+                            Cube::new(color, count)
                         })
                         .collect()
                 })
